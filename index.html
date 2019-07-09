@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body class="main-nav">
+
+    
+      <form>
+        
+    <h1>Job 1</h1> <br>
+    Hours: <input type="text" name="jobOne"/> Pay Rate: <input type="text" name="payRateone"/><br>
+        <br>    
+    <h1>Job 2</h1>
+        <br> Hours: <input type="text" name="jobTwo"/> Pay Rate: <input type="text" name="payRatetwo"/> 
+        <br>
+        <br>
+        Nondiscretionary Bonus: <input type="text" name="nonDisBon"/> <br>
+        <input class="calbutton" type="button" name="calculate" value="Calculate" onclick="calcSum()" />
+        <br>
+        <br>
+        
+        <h3>Final Pay:</h3> <label type="text" name="end"><h3>0.00</h3></label>
+        <br>
+        <br>
+        
+        
+         </form>
+    
+ <p>
+  <button id="calbutton" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Calculation Breakdown
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+   <div class="container">  
+    <div class="lineOne">   <h5>Total Straight-Time Pay:</h5> <label name="tsp"><h5>0.00</h5></label> </div> 
+        
+        <div class="lineOne center"><h2>/</h2> </div>
+        <div class="lineOne">  <h5>Total Hours:</h5> <label name= "th"><h5>0</h5></label></div>
+        
+      <div class="lineOne">  <h2>=</h2></div>
+            
+      </div>
+      
+      <div class="container">
+          <div class="lineOne"><h5>Weighted- Average Regular Rate of Pay:</h5> <label name="warop" ><h5>0.00</h5></label></div>
+        
+          <div class="lineOne center"><h2>/</h2></div>
+        
+          <div class="lineOne"><h5>2</h5></div>
+        
+          <div class="lineOne"><h2>=</h2></div>
+          
+        </div> 
+      
+      <div class="container">
+          <div class="lineOne"><h5> Half of regular rate:</h5> <label name="hrr" ><h5>0.00</h5></label></div>
+          <div class="lineOne center"> <h2>X</h2></div>
+          <div class="lineOne"><h5> Overtime Hours:</h5> <label name="OTH" ><h5>0</h5></label></div>
+          <div class="lineOne"> <h2>=</h2></div>
+          </div>
+       
+          
+    <div class="container">
+        <div class="lineOne"><h5>  Total Overtime Pay:</h5>  <label name="TOTP" ><h5> 0.00</h5> </label></div>
+        <div class="lineOne center"> <h2>+</h2></div>
+        <div class="lineOne"><h5>  Gross Pay:</h5>  <label name="GP" ><h5> 0.00</h5> </label></div>
+        </div>
+        
+      <div class="container">
+          <div class="lineOne"> <h5> Non-discrestionary Bonus: </h5><label name="NB" ><h5>0.00</h5></label></div>
+          <div class="lineOne center"> <h2>/</h2></div>
+          <div class="lineOne"> <h5> Hours: <br> 40 </h5></div>
+          <div class="lineOne "> <h2>X</h2></div>
+        </div>
+      
+      
+      <div class="container">
+          <div class="lineOne"> <h5>Time and a half: 1.5 </h5> </div>
+          <div class="lineOne center"> <h2>=</h2></div>
+              <div class="lineOne"><h5> New Hourly:</h5> <label name="NH" >0.00</label></div>
+          <div class="lineOne"> <h2>X</h2></div>
+      </div>
+      
+      <div class="container">
+          <div class="lineOne"> <h5>Overtime Hours:</h5> <label name="OTH2" ><h5>0</h5></label></div>
+          <div class="lineOne center"> <h2>=</h2></div>
+          <div class="lineOne"> <h5>Bonus Over-time: </h5><label name="BOT" ><h5>0.00</h5></label></div>
+          
+      </div>  
+       <div class="container2">
+           <div class="lineOne"> <h5>Gross Pay:</h5> <label name="GP2" ><h5>0.00</h5></label></div>
+           <div class="lineOne center"> <h2>+</h2></div>
+           <div class="lineOne"> <strong><h6>Non-discrestionary Bonus:</h6></strong> <label name="NB2" ><h5>0.00</h5></label></div>
+           <div class="lineOne center">  <h2>+</h2></div>
+           <div class="lineOne">  <h5>Bonus Over-time:</h5> <label name="BOT2" ><h5>0.00</h5></label></div>
+           
+           
+            
+  </div>
+      <div class="containerfinal">
+      <div class="lineOne center"> <h2>=</h2></div>
+      <div class="lineOne"> <h2>Final Pay:</h2> <label type="text" name="end2"><h5>0.00</h5></label></div>
+      </div>
+
+  </div>
+</div>
+ 
+   
+        
+    
+    
+    
+
+ 
+        
+    
+    
+    
+    
+   
+  
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+   
+    
+    
+   
+  <script type="text/javascript" src="script.js"></script>     
+</body>
+    
+ 
+</html>
